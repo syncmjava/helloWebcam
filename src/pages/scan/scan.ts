@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BrowserQRCodeReader, VideoInputDevice } from '@zxing/library';
+import { ChenkInOutPage } from '../chenk-in-out/chenk-in-out';
 
 /**
  * Generated class for the ScanPage page.
@@ -15,12 +16,13 @@ import { BrowserQRCodeReader, VideoInputDevice } from '@zxing/library';
   templateUrl: 'scan.html',
 })
 export class ScanPage {
+ chenkInOutPage;
    codeReader;
    firstDeviceId;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.codeReader= new BrowserQRCodeReader();
-   
+    
+   this.chenkInOutPage = ChenkInOutPage;
 
 
   }
@@ -32,6 +34,7 @@ export class ScanPage {
   }
 
   ionConLoad() {
+    this.codeReader = new BrowserQRCodeReader();
     console.log('ZXing code reader initialized')
 
     this.codeReader.getVideoInputDevices()

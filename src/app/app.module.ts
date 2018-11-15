@@ -7,12 +7,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ScanPage } from '../pages/scan/scan';
+import { ChenkInOutPage } from '../pages/chenk-in-out/chenk-in-out';
+import { ChenkResultPage } from '../pages/chenk-result/chenk-result';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ScanPage
+    ScanPage,
+    ChenkInOutPage,
+    ChenkResultPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,9 @@ import { ScanPage } from '../pages/scan/scan';
   entryComponents: [
     MyApp,
     HomePage,
-    ScanPage
+    ScanPage,
+    ChenkInOutPage,
+    ChenkResultPage
   ],
   providers: [
     StatusBar,
